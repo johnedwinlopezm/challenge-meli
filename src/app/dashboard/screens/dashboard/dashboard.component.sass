@@ -1,0 +1,50 @@
+.container-home
+  display: flex
+  flex-direction: column
+  flex-wrap: nowrap
+  justify-content: flex-start
+  gap: 10px
+  min-width: 100%
+  .toolbar
+    order: 1
+    display: flex
+    background-color: var(--color-primary)
+    flex-direction: row
+    flex-wrap: nowrap
+    justify-content: center
+    align-content: center
+    text-align: center
+    align-items: center
+    min-width: 100%
+    padding: 0.5em 0 0.5em
+    .input-container
+      display: flex
+      margin-left: 1em
+      .input-field
+        border-radius: 8px 0 0 8px
+        width: 100%
+        padding: 10px
+        outline: none
+        border: none
+      .search
+        background-color: var(--background-color)
+        padding: 0.5em
+        border-radius: 0 8px 8px 0
+
+  .content
+    order: 2
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: center
+    padding: 1% 5% 1% 5%
+    .menu
+      order: 1
+    .info
+      order: 2
+
+.h1
+  font-size: 4em
+  padding: 0px
+  margin: 0px
+  line-height: 100%
