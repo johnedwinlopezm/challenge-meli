@@ -2,8 +2,8 @@
     <div class="toolbar">
       <div><img [src]="logo"></div>
       <div class="input-container">
-        <input class="input-field" type="text" [placeholder]="inputPlaceHolder" name="usrnm">
-        <div class="search"><img [src]="search"></div>
+        <input class="input-field" type="text" [placeholder]="inputPlaceHolder" name="usrnm" [formControl]="product">
+        <div class="search" (click)="searchProduc()"><img [src]="search"></div>
       </div>
     </div>
     <div class="content">

@@ -1,0 +1,12 @@
+<div class="container-item" *ngIf="item">
+    <div class="image">
+        <img [src]="item.picture">
+    </div>
+    <div class="description">
+        <div class="price-list">{{'$ '+item.price.amount}}<img [src]="shipping" *ngIf="item.free_shipping"></div>
+        <div class="text-list">{{item.title}}</div>
+    </div>
+    <div class="ubicacion">
+        <div class="text-small">{{item.condition}}</div>
+    </div>
+</div>

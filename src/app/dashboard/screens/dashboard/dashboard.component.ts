@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -12,18 +13,15 @@ export class DashboardComponent {
   search = '../../../assets/images/ic_Search.png';
   inputPlaceHolder = 'Nunca dejes de buscar'
 
+  product = new FormControl('');
+
   constructor(private router: Router){
   }
 
-  characters(){
-    this.router.navigate(['dashboard/character/list']);
-  }
-
-  episodes(){
-    this.router.navigate(['dashboard/episode/list']);
-  }
-
-  locations() {
-    this.router.navigate(['dashboard/location/list']);
+  searchProduc() {
+    const product = this.product.getRawValue();
+    if(product) {
+      this.router.navigate(['dashboard/items', product]);
+    }
   }
 }

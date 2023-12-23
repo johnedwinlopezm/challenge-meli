@@ -4,7 +4,6 @@
   flex-wrap: nowrap
   justify-content: flex-start
   gap: 10px
-  min-width: 100%
   .toolbar
     order: 1
     display: flex
@@ -15,10 +14,10 @@
     align-content: center
     text-align: center
     align-items: center
-    min-width: 100%
-    padding: 0.5em 0 0.5em
+    padding: 0.5em 10em 0.5em 10em
     .input-container
       display: flex
+      flex-grow: 4
       margin-left: 1em
       .input-field
         border-radius: 8px 0 0 8px
@@ -34,10 +33,10 @@
   .content
     order: 2
     display: flex
-    flex-direction: row
+    flex-direction: column
     flex-wrap: wrap
     justify-content: center
-    padding: 1% 5% 1% 5%
+    padding: 0.5em 10em 0.5em 10em
     .menu
       order: 1
     .info

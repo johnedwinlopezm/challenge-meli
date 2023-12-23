@@ -6,7 +6,7 @@ const routes: Routes = [
   { 
   path: 'dashboard', component: DashboardComponent,
   children: [
-   // { path: 'character', loadChildren: () => import('../character/character.module').then(m => m.CharacterModule) }
+   { path: 'items', loadChildren: () => import('../search-products/search-products.module').then(m => m.SearchProductsModule) }
   ]
 }
 ];
