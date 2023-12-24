@@ -8,5 +8,6 @@ import { Item } from '../../models/item';
 })
 export class InfoItemComponent {
   @Input() item!: Item;
+  @Input() isFirst = false;
   shipping = '../../../assets/images/ic_shipping.png';
 }

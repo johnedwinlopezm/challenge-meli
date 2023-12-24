@@ -1,6 +1,6 @@
 <div class="container-list" *ngIf="search">
-    <div>{{search.categories}}</div>
-    <div *ngFor="let item of search.items">
-        <app-info-item [item]="item"></app-info-item>
+    <!--<div>{{search.categories}}</div>-->
+    <div *ngFor="let item of search.items,  index as i ">
+        <app-info-item [item]="item" [isFirst]="i === 0"></app-info-item>
     </div>
 </div>
