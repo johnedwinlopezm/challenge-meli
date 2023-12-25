@@ -1,4 +1,4 @@
-<div class="container-item" [ngClass]="isFirst ? '': 'boder-line'" *ngIf="item">
+<div class="container-item" [ngClass]="isFirst ? '': 'boder-line'" *ngIf="item" (click)="openDescription(item.id)">
     <div class="image">
         <img [src]="item.picture" >
     </div>

@@ -16,4 +16,8 @@ export class SearchProductsService extends BaseService{
   getProducts(name: string) : Observable<Search>{
     return this.doGet(`${this.apiUrl}/items?q=${name}`);
   }
+
+  getDescriptionProduct( idProduct: string): Observable<any> {
+    return this.doGet(`${this.apiUrl}/items/${idProduct}`);
+  }
 }

@@ -7,6 +7,6 @@ export interface Search {
 }
 
 interface Author{
-    name:String, 
-    lastname:String
+    name:string, 
+    lastname:string
 }

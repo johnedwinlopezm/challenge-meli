@@ -1,14 +1,14 @@
 export interface Item {
-    id: String,
-    title: String,
+    id: string,
+    title: string,
     price: Price,
-    picture: String,
-    condition: String,
+    picture: string,
+    condition: string,
     free_shipping: Boolean
 }
 
 export interface Price {
-    currency: String,
+    currency: string,
     amount: Number,
     decimals: Number
 }
