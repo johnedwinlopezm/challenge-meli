@@ -21,7 +21,7 @@ export class DashboardComponent {
   searchProduc() {
     const product = this.product.getRawValue();
     if(product) {
-      this.router.navigate(['dashboard/items', product]);
+      this.router.navigate(['items', product]);
     }
   }
 }

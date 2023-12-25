@@ -15,6 +15,6 @@ export class InfoItemComponent {
   constructor(private router: Router){}
 
   openDescription(idProduct:string) {
-    this.router.navigate(['dashboard/items', idProduct]);
+    this.router.navigate(['items/description', idProduct]);
   }
 }

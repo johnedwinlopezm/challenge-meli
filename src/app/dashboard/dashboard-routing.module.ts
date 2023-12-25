@@ -4,7 +4,7 @@ import { DashboardComponent } from './screens/dashboard/dashboard.component';
 
 const routes: Routes = [
   { 
-  path: 'dashboard', component: DashboardComponent,
+  path: '', component: DashboardComponent,
   children: [
    { path: 'items', loadChildren: () => import('../search-products/search-products.module').then(m => m.SearchProductsModule) }
   ]
