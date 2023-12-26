@@ -6,7 +6,7 @@
         <div class="row2">
             <div class="col1">{{ItemDesResponse.item.condition +' '+ ItemDesResponse.item.sold_quantity + 'vendidos'}}</div>
             <div class="col2 title-price">{{ItemDesResponse.item.title}}</div>
-            <div class="col3 price">{{ItemDesResponse.item.price.amount}}</div>
+            <div class="col3 price">{{ItemDesResponse.item.price.amount | currency}}</div>
             <div class="col4"><button class="my-button">Comprar</button></div>
         </div>
     </div>

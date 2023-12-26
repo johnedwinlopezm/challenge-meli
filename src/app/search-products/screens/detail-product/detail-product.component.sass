@@ -5,15 +5,18 @@
     justify-content: flex-start
     background-color: var(--background-color-list-products)
     border-radius: 4px
-    padding: 32px
+    padding: 2rem
     .imagen
         order: 0
         display: flex
         flex-direction: row
         flex-wrap: nowrap
-        justify-content: flex-start
+        justify-content: space-around
         .row1
             order: 0
+            flex-grow: 4
+            img
+                width: 95%
         .row2
             order: 1
             display: flex
@@ -21,11 +24,11 @@
             flex-wrap: nowrap
             justify-content: flex-start
             .col1
-                padding-bottom: 16px
+                padding-bottom: 1rem
             .col2
-                padding-bottom: 32px
+                padding-bottom: 2rem
             .col3
-                padding-bottom: 32px
+                padding-bottom: 2rem
             .col4
                 button
                     width: 100%
@@ -35,4 +38,4 @@
         flex-direction: column
         flex-wrap: nowrap
         justify-content: flex-start
-        gap: 32px
+        gap: 2rem
