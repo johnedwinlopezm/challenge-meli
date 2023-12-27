@@ -14,7 +14,10 @@
     align-content: center
     text-align: center
     align-items: center
-    padding: 0.5em 10em 0.5em 10em
+    @media screen and (max-width: 26rem)
+     padding: 0.4em 1em 0.4em 1em
+    @media screen and (min-width: 26.1rem)
+     padding: 0.5em 10em 0.5em 10em
     .input-container
       display: flex
       flex-grow: 4
@@ -36,7 +39,10 @@
     flex-direction: column
     flex-wrap: wrap
     justify-content: center
-    padding: 0.5em 10em 0.5em 10em
+    @media screen and (max-width: 26rem)
+     padding: 0.4em 1em 0.4em 1em
+    @media screen and (min-width: 26.1rem)
+     padding: 0.5em 10em 0.5em 10em
     .menu
       order: 1
     .info

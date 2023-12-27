@@ -4,13 +4,21 @@
     flex-wrap: nowrap
     justify-content: space-between
     gap: 1rem
-    padding: 1rem 0 1rem 1rem
+    @media screen and (max-width: 26rem)
+        padding: 1rem 0 1rem 0rem
+    @media screen and (min-width: 26.1rem)
+        padding: 1rem 0 1rem 1rem
     .image
         order: 1
         img
-            width: 11.25rem
-            height: 11.25rem
-            border-radius: 0.25rem
+            @media screen and (min-width: 26.1rem)
+                width: 11.25rem
+                height: 11.25rem
+                border-radius: 0.25rem
+            @media screen and (max-width: 26rem)
+                width: 6rem
+                height: 6rem
+                border-radius: 0.25rem
     .description
         order: 2
         display: flex
