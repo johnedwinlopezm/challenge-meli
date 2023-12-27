@@ -10,6 +10,9 @@ npm i   or npm install
 # start project
 npm start
 
+# start test
+npm test
+
 ## Documentation angular
 
 # ChallangeMeli
