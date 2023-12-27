@@ -7,6 +7,11 @@
 # install dependencies of project
 npm i   or npm install
 
+# start project
+npm start
+
+## Documentation angular
+
 # ChallangeMeli
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
