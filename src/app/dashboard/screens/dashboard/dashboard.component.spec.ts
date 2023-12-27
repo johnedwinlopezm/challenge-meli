@@ -3,6 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { DashboardComponent } from './dashboard.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { DashboardModule } from '../../dashboard.module';
 
 describe('DashboardComponent', () => {
   let component: DashboardComponent;
@@ -12,7 +13,8 @@ describe('DashboardComponent', () => {
     await TestBed.configureTestingModule({
       imports: [
         RouterTestingModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        DashboardModule
       ],
       declarations: [DashboardComponent]
     })
