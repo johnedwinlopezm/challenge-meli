@@ -1,6 +1,6 @@
 <div class="container-item" [ngClass]="isFirst ? '': 'boder-line'" *ngIf="item" (click)="openDescription(item.id)">
     <div class="image">
-        <img [src]="item.picture" >
+        <img [src]="item.picture" title="picture">
     </div>
     <div class="description">
         <div class="price-list">{{'$ '+item.price.amount}}<img [src]="shipping" *ngIf="item.free_shipping"></div>

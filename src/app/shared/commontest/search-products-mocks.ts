@@ -2,9 +2,9 @@ import { of } from 'rxjs';
 import { Search } from '../../search-products/models/search';
 import { ItemDesResponse } from '../../search-products/models/itemdesResponse';
 
-export class MockSearchProductsService  {
-    getProducts = jasmine.createSpy('getProducts(name: string)').and.callFake(function () {
-        const products : Search = {
+export class MockSearchProductsService {
+    getProducts = jasmine.createSpy('getProducts(name: string)').and.callFake(function (name: string) {
+        const products: Search = {
             author: {
                 name: 'john',
                 lastname: 'lopez'
@@ -39,11 +39,11 @@ export class MockSearchProductsService  {
                     }
                 }
             ],
-        } 
+        }
         return of(products);
     });
 
-    getDescriptionProduct = jasmine.createSpy('getDescriptionProduct(idProduct: string)').and.callFake(function () {
+    getDescriptionProduct = jasmine.createSpy('getDescriptionProduct(idProduct: string)').and.callFake(function (idProduct: string) {
         const item: ItemDesResponse = {
             author: {
                 name: 'john',
@@ -65,5 +65,12 @@ export class MockSearchProductsService  {
             }
         }
         return of(item);
+    });
+
+    getCategorias = jasmine.createSpy('getDescriptionProduct(idProduct: string)').and.callFake(function (idProduct: string) {
+        return [
+            'Autos, Motos y Otros',
+            'Autos y Camionetas'
+        ];
     });
 }

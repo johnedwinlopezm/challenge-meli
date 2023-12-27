@@ -7,7 +7,7 @@
 <div class="container-detail" *ngIf="ItemDesResponse">
     <div class="imagen">
         <div class="row1">
-            <img [src]="ItemDesResponse.item.picture" >
+            <img [src]="ItemDesResponse.item.picture" title="picture">
         </div>
         <div class="row2">
             <div class="col1">{{ItemDesResponse.item.condition +' '+ ItemDesResponse.item.sold_quantity + ' vendidos'}}</div>
