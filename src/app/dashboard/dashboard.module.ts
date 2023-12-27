@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './screens/dashboard/dashboard.component';
 import { SharedModule } from '../shared/shared.module';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
 
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
+    ToolbarComponent
   ],
   imports: [
     CommonModule,

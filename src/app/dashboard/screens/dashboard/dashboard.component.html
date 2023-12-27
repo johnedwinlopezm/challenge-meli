@@ -1,11 +1,6 @@
 <div class="container-home">
-    <div class="toolbar">
-      <div><img [src]="logo" title="logo"></div>
-      <div class="input-container">
-        <input class="input-field" type="text" [placeholder]="inputPlaceHolder" name="usrnm" [formControl]="product" (keyup.enter)="searchProduc()">
-        <div class="search" (click)="searchProduc()"><img [src]="search" title="search"></div>
-      </div>
-    </div>
+    <app-toolbar class="toolbar">
+    </app-toolbar>
     <div class="content">
       <div class="info">
         <router-outlet></router-outlet>

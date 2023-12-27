@@ -1,3 +1,12 @@
+# Dependencies
+1. node v18.19.0  command => brew install node@18
+2. angular-CLI  command => npm install -g @angular/cli
+3. typescript  command => npm i typescript    
+                           brew install typescript
+
+# install dependencies of project
+npm i   or npm install
+
 # ChallangeMeli
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
