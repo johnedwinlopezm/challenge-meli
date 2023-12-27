@@ -74,3 +74,45 @@ export class MockSearchProductsService {
         ];
     });
 }
+
+export class MockHttp {
+    get = jasmine.createSpy('getProducts(name: string)').and.callFake(function (name: string) {
+        const products: Search = {
+            author: {
+                name: 'john',
+                lastname: 'lopez'
+            },
+            categories: [
+                'Autos, Motos y Otros',
+                'Autos y Camionetas'
+            ],
+            items: [
+                {
+                    title: 'Renault Koleos Intens 2.5 Cvt 4x4 2019 Hermosa! (aes)',
+                    id: 'MLA1590776010',
+                    picture: 'http://http2.mlstatic.com/D_998066-MLA73279960175_122023-I.jpg',
+                    free_shipping: false,
+                    condition: 'used',
+                    price: {
+                        amount: 32000,
+                        currency: 'USD',
+                        decimals: 0
+                    }
+                },
+                {
+                    title: 'Renault Koleos Privilege',
+                    id: 'MLA1597688004',
+                    picture: 'http://http2.mlstatic.com/D_609824-MLA73321489928_122023-I.jpg',
+                    free_shipping: false,
+                    condition: 'used',
+                    price: {
+                        amount: 12000000,
+                        currency: 'ARS',
+                        decimals: 0
+                    }
+                }
+            ],
+        }
+        return of(products);
+    });
+}
