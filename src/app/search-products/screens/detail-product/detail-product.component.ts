@@ -12,7 +12,7 @@ export class DetailProductComponent implements OnInit {
 
   ItemDesResponse!:ItemDesResponse;
   titleDescription = 'Descripcion del producto';
-
+  categorias: string []= [];
   constructor(
     private searchProducts: SearchProductsService, 
     private activatedRoute: ActivatedRoute) {
@@ -24,7 +24,9 @@ export class DetailProductComponent implements OnInit {
         this.searchProducts.getDescriptionProduct(idProduct).subscribe({
           next: result => {
             if (result) {
-              this.ItemDesResponse = result
+              this.ItemDesResponse = result;
+              this.categorias = this.searchProducts.getCategorias();
+              // this.categorias.push(this.ItemDesResponse.item.title);
             }
           },
           error: error => { console.log(error) }

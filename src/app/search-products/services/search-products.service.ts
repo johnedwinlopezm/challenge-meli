@@ -9,6 +9,7 @@ import { ItemDesResponse } from '../models/itemdesResponse';
 export class SearchProductsService extends BaseService {
 
   private apiUrl = `http://localhost:3000/api/v1/products/`;
+  private categories: string[]=[];
 
   constructor(protected httpClient: HttpClient) {
     super(httpClient)
@@ -21,4 +22,13 @@ export class SearchProductsService extends BaseService {
   getDescriptionProduct(idProduct: string): Observable<ItemDesResponse> {
     return this.doGet(`${this.apiUrl}/items/${idProduct}`);
   }
+
+  setCategorias(categories: string[]){
+    this.categories = categories;
+  }
+
+  getCategorias() {
+    return this.categories;
+  }
+
 }

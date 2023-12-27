@@ -2,7 +2,7 @@
     <div class="toolbar">
       <div><img [src]="logo"></div>
       <div class="input-container">
-        <input class="input-field" type="text" [placeholder]="inputPlaceHolder" name="usrnm" [formControl]="product">
+        <input class="input-field" type="text" [placeholder]="inputPlaceHolder" name="usrnm" [formControl]="product" (keyup.enter)="searchProduc()">
         <div class="search" (click)="searchProduc()"><img [src]="search"></div>
       </div>
     </div>

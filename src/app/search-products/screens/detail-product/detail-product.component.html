@@ -1,10 +1,16 @@
+<div class="breadcrumb" *ngIf="categorias">
+    <div *ngFor="let cat of categorias, index as i">
+        <label class="text-brand" *ngIf="i !== categorias.length-1">{{ cat + '>' }}</label>
+        <label class="text-brand-b" *ngIf="i === categorias.length-1">{{ cat }}</label>
+    </div>
+</div>
 <div class="container-detail" *ngIf="ItemDesResponse">
     <div class="imagen">
         <div class="row1">
             <img [src]="ItemDesResponse.item.picture" >
         </div>
         <div class="row2">
-            <div class="col1">{{ItemDesResponse.item.condition +' '+ ItemDesResponse.item.sold_quantity + 'vendidos'}}</div>
+            <div class="col1">{{ItemDesResponse.item.condition +' '+ ItemDesResponse.item.sold_quantity + ' vendidos'}}</div>
             <div class="col2 title-price">{{ItemDesResponse.item.title}}</div>
             <div class="col3 price">{{ItemDesResponse.item.price.amount | currency}}</div>
             <div class="col4"><button class="my-button">Comprar</button></div>
@@ -12,6 +18,6 @@
     </div>
     <div class="description">
         <div class="title">{{titleDescription}}</div>
-        <div class="text-general">{{ItemDesResponse.item.description}}</div>
+        <div class="text-general" [innerHTML]="ItemDesResponse.item.description"></div>
     </div>
 </div>

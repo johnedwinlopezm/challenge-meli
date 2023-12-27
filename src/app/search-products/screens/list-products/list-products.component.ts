@@ -21,7 +21,10 @@ export class ListProductsComponent implements OnInit {
         this.searchProducts.getProducts(product).subscribe({
           next: result => {
             if (result) {
-              this.search = result
+              this.search = result;
+              if(this.search.categories) {
+                this.searchProducts.setCategorias(this.search.categories);
+              }
             }
           },
           error: error => { console.log(error) }

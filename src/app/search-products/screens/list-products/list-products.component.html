@@ -1,6 +1,11 @@
+<div class="breadcrumb" *ngIf="search.categories">
+    <div *ngFor="let cat of search.categories, index as i">
+        <label class="text-brand" *ngIf="i !== search.categories.length-1">{{ cat + '>' }}</label>
+        <label class="text-brand-b" *ngIf="i === search.categories.length-1">{{ cat }}</label>
+    </div>
+</div>
 <div class="container-list" *ngIf="search">
-    <!--<div>{{search.categories}}</div>-->
-    <div *ngFor="let item of search.items,  index as i ">
-        <app-info-item [item]="item" [isFirst]="i === 0"></app-info-item>
+    <div class="" *ngFor="let item of search.items,  index as i ">
+        <app-info-item [item]="item" [isFirst]="i === 0" ></app-info-item>
     </div>
 </div>

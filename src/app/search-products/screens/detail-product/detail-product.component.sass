@@ -14,9 +14,9 @@
         justify-content: space-around
         .row1
             order: 0
-            flex-grow: 4
             img
                 width: 95%
+                max-width: 680px
         .row2
             order: 1
             display: flex
@@ -31,11 +31,18 @@
                 padding-bottom: 2rem
             .col4
                 button
-                    width: 100%
+                    width: 16rem
     .description
         order: 1
         display: flex
         flex-direction: column
         flex-wrap: nowrap
         justify-content: flex-start
+        padding-top: 2rem
         gap: 2rem
+.breadcrumb
+    display: flex
+    flex-direction: row
+    flex-wrap: nowrap
+    gap: 0.5em
+    padding-bottom: 1rem
